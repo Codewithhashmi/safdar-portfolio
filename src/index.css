@@ -1,0 +1,243 @@
+/* Reset & basic setup */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f8fafc;
+  padding: 0 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.dark-mode {
+  background: linear-gradient(to bottom right, #1e1e1e, #000000);
+  color: #f8fafc;
+}
+
+/* Theme toggle button */
+button#toggle-theme {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background: #3b82f6;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s, transform 0.3s;
+  z-index: 100;
+}
+
+button#toggle-theme:hover {
+  background: #2563eb;
+  transform: scale(1.1);
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  padding: 60px 0 20px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #3b82f6;
+  text-shadow: 0 2px 4px rgba(59, 130, 246, 0.6);
+  margin-bottom: 0.3rem;
+  animation: slideUp 1s ease-out;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Interests Cards */
+section#interests {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 40px 0;
+}
+
+.card {
+  background: #1f2937;
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid #374151;
+  transition: all 0.4s ease;
+  transform: translateY(0);
+}
+
+.card:hover {
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+  border-color: #3b82f6;
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  color: #60a5fa;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+}
+
+.card p {
+  color: #cbd5e1;
+}
+
+/* Projects Section */
+section#projects {
+  text-align: center;
+  padding: 60px 0;
+}
+
+section#projects h2 {
+  font-size: 2.5rem;
+  color: #3b82f6;
+  margin-bottom: 30px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.project-card {
+  background: #1e293b;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid #334155;
+  transition: all 0.4s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.03);
+  border-color: #3b82f6;
+}
+
+.project-card h3 {
+  color: #60a5fa;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #e2e8f0;
+}
+
+/* Contact Section */
+section#contact {
+  max-width: 600px;
+  margin: 0 auto 50px;
+  padding: 30px;
+  text-align: center;
+}
+
+section#contact h2 {
+  font-size: 2.2rem;
+  color: #3b82f6;
+  margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 1px solid #475569;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  font-size: 1rem;
+  resize: none;
+  transition: border 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #3b82f6;
+  outline: none;
+}
+
+form button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+form button:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  border-top: 1px solid #374151;
+  padding: 20px 0;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  background: #0f172a;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  section#projects h2,
+  section#contact h2 {
+    font-size: 1.8rem;
+  }
+
+  .card,
+  .project-card {
+    padding: 18px;
+  }
+}
