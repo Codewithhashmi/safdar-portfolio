@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/safdar-portfolio/static/js/main.b7000379.js",
+    "main.js": "/safdar-portfolio/static/js/main.e54ca373.js",
     "index.html": "/safdar-portfolio/index.html",
-    "main.b7000379.js.map": "/safdar-portfolio/static/js/main.b7000379.js.map"
+    "main.e54ca373.js.map": "/safdar-portfolio/static/js/main.e54ca373.js.map"
   },
   "entrypoints": [
-    "static/js/main.b7000379.js"
+    "static/js/main.e54ca373.js"
   ]
 }
